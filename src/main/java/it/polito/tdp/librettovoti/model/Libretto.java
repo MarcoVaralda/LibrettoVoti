@@ -47,6 +47,20 @@ public class Libretto {
 		return v;
 	}
 	
+	/**
+	 * Cerca nel libretto il voto passato come parametro, ovvero un voto con la stessa
+	 * valutazione e lo stesso nome di quello passato come parametro.
+	 * null se non trovato
+	 * @param v
+	 * @return
+	 */
+	public Voto cercaVoto(Voto v) {
+		for(Voto vv : this.voti)
+			if(vv.getNome().equals(v.getNome()) && vv.getVoto()==v.getVoto())
+				return vv;
+		return null;
+	}
+	
 	public String toString() {
 		String s = "";
 		for(Voto v : this.voti) {

@@ -44,7 +44,19 @@ public class TestLibretto {
 		
 		System.out.println("Cerco voto del corso di Informatica:");
 		Voto v = libretto.cercaCorso("Informatica");
-		System.out.println(v.getVoto());
+		System.out.println(v.getVoto()+"\n");
+		
+		// Punto 4
+		
+		System.out.println("***** PUNTO 4 *****\n");
+		
+		Voto daCercare = libretto.cercaVoto(voto1);
+		System.out.println("Cerco l'esame di Analisi 1 nel libretto:");
+		
+		if(daCercare==null)
+			System.out.println("Il voto cercato non è presente nel libretto!");
+		else
+			System.out.println(daCercare);
 				
 	}	
 
