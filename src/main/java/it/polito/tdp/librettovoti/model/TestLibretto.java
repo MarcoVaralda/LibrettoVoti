@@ -34,8 +34,18 @@ public class TestLibretto {
 		*/
 
 		// Seconda soluzione con il libretto ( migliore perchè ho un metodo di stampa implementato da me
+		System.out.println("Cerco Voti con punteggio pari a 25:");
 		Libretto librettoVenticinque = libretto.votiUguali(25);
 		System.out.println(librettoVenticinque);
+		
+		// Punto 3
+		
+		System.out.println("***** PUNTO 3 *****\n");
+		
+		System.out.println("Cerco voto del corso di Informatica:");
+		Voto v = libretto.cercaCorso("Informatica");
+		System.out.println(v.getVoto());
+				
 	}	
 
 }

@@ -30,6 +30,23 @@ public class Libretto {
 		return risultato;
 	}
 	
+	/**
+	 * Ricerca voto del corso passato come parametro.
+	 * null se non trovato
+	 * 
+	 * @param nomeCorso
+	 * @return
+	 */
+	public Voto cercaCorso(String nomeCorso) {
+		Voto v = null;
+		for(Voto vv : this.voti)
+			if(vv.getNome().equals(nomeCorso)) {
+				v = vv;
+				break;
+			}
+		return v;
+	}
+	
 	public String toString() {
 		String s = "";
 		for(Voto v : this.voti) {
