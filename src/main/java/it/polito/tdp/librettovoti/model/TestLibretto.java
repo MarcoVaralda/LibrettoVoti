@@ -44,7 +44,10 @@ public class TestLibretto {
 		
 		System.out.println("Cerco voto del corso di Informatica:");
 		Voto v = libretto.cercaCorso("Informatica");
-		System.out.println(v.getVoto()+"\n");
+		if(v!=null)
+			System.out.println(v.getVoto()+"\n");
+		else
+			System.out.println("Il voto cercato non è presente nel libretto\n");
 		
 		// Punto 4
 		
@@ -70,6 +73,12 @@ public class TestLibretto {
 		else
 			System.out.println("E' presente un conflitto: il voto registrato nel libretto è: " +daVerificare+"\n");
 				
+		
+		// Punto 6
+		
+		// Modifiche effettuate nel metodo add della classe Libretto
+		
+		
 	}	
 
 }

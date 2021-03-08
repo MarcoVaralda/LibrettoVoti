@@ -11,7 +11,8 @@ public class Libretto {
 	}
 	
 	public void add (Voto v) {
-		this.voti.add(v);
+		if(this.voti.contains(v) || verificaVoto(v)!=null) 
+			this.voti.add(v);
 	}
 	
 	public List<Voto> listaVotiUguali(int punteggio) {
