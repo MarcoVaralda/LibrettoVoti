@@ -87,5 +87,19 @@ public class Libretto {
 		}
 		return s;
 	}
+	
+	public Libretto ordinaLibretto() {
+		LinkedList<Voto> temp = new LinkedList<Voto>();
+		for(Voto v : this.voti)
+			temp.add(v);
+		
+		Collections.sort(temp, new ComparatoreVoti());;
+		Libretto lTemp = new Libretto();
+		
+		for(Voto vv : temp)
+			lTemp.add(vv);
+		
+		return lTemp;
+	}
 
 }

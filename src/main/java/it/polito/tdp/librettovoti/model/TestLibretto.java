@@ -105,6 +105,12 @@ public class TestLibretto {
 		System.out.println("Stampo il libretto: \n"+libretto);
 		System.out.println("Stampo il libretto migliorato: \n"+librettoMigliorato+"\n");
 			
+		// Punto 8
+		
+		System.out.println("***** PUNTO 8 *****\n");
+		
+		Libretto l = libretto.ordinaLibretto();
+		System.out.println("Ordino il libretto: \n"+l+"\n");
 		
 	}	
 

@@ -58,18 +58,6 @@ public class Voto { // Questa classe è un semplice contenitore di dati, non li 
 		return "Esame " + nome + " superato con " + voto + " in data " + data;
 	}
 
-
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + ((data == null) ? 0 : data.hashCode());
-		result = prime * result + ((nome == null) ? 0 : nome.hashCode());
-		result = prime * result + voto;
-		return result;
-	}
-
-
 	/*@Override
 	public boolean equals(Object obj) {
 		Voto altro = (Voto) obj;
