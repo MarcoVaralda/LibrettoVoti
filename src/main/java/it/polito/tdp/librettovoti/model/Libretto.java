@@ -6,12 +6,16 @@ public class Libretto {
 	
 	private List<Voto> voti;
 	
+	public List<Voto> getVoti() {
+		return voti;
+	}
+
 	public Libretto() {
 		this.voti = new ArrayList<>();
 	}
 	
 	public void add (Voto v) {
-		if(this.voti.contains(v) || verificaVoto(v)!=null) 
+		if(!this.voti.contains(v) || verificaVoto(v)!=null) 
 			this.voti.add(v);
 	}
 	

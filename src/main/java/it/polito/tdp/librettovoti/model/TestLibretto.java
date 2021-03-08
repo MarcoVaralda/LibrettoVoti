@@ -78,6 +78,33 @@ public class TestLibretto {
 		
 		// Modifiche effettuate nel metodo add della classe Libretto
 		
+		// Punto 7
+		
+		System.out.println("***** PUNTO 7 *****\n");
+		
+		Libretto librettoMigliorato = new Libretto();
+		int votoTemp=0;
+		
+		for(Voto vv : libretto.getVoti()) {
+			Voto vtemp = null;
+			if(vv.getVoto()>=18 && vv.getVoto()<24) {
+				votoTemp=vv.getVoto()+1;
+				vtemp = new Voto(vv.getNome(),votoTemp,vv.getData());
+			}
+			if(vv.getVoto()>=24 && vv.getVoto()<29) {
+				votoTemp=vv.getVoto()+2;
+				vtemp = new Voto(vv.getNome(),votoTemp,vv.getData());
+			}
+			if(vv.getVoto()==30 || vv.getVoto()==29)
+				vtemp = new Voto(vv.getNome(),30,vv.getData());
+
+			if(vtemp!=null)
+				librettoMigliorato.add(vtemp);			
+		}
+		
+		System.out.println("Stampo il libretto: \n"+libretto);
+		System.out.println("Stampo il libretto migliorato: \n"+librettoMigliorato+"\n");
+			
 		
 	}	
 
