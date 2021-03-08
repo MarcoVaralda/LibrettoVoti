@@ -101,5 +101,14 @@ public class Libretto {
 		
 		return lTemp;
 	}
+	
+	/**
+	 * Elimina dal libretto il voto passato come parametro
+	 * @param punteggio
+	 * @return
+	 */
+	public void eliminaVoti(Voto daCancellare) {
+		this.voti.remove(daCancellare);
+	}
 
 }

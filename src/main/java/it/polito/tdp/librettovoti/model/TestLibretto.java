@@ -112,6 +112,22 @@ public class TestLibretto {
 		Libretto l = libretto.ordinaLibretto();
 		System.out.println("Ordino il libretto: \n"+l+"\n");
 		
+		// Punto 9
+		
+		System.out.println("***** PUNTO 9 *****\n");
+		
+		int punteggio = 24;
+		LinkedList<Voto> temp = new LinkedList<Voto>();
+		
+		for(Voto vvv : libretto.getVoti())
+			if(vvv.getVoto()<punteggio)
+				temp.add(vvv);
+		
+		for(Voto vvvv : temp)
+			libretto.eliminaVoti(vvvv);
+		
+		System.out.println("Libretto aggiornato: \n" +libretto);
+		
 	}	
 
 }
