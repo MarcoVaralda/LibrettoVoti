@@ -61,6 +61,20 @@ public class Libretto {
 		return null;
 	}
 	
+	/**
+	 * Verifica se esiste un esame nel libretto in conflitto con quelli presenti:
+	 * stesso nome, ma con valutazione diversa.
+	 * null se non sono presenti conflitti
+	 * @param v
+	 * @return
+	 */
+	public Voto verificaVoto(Voto v) {
+		for(Voto vv : this.voti)
+			if(vv.getNome().equals(v.getNome()) && vv.getVoto()!=v.getVoto())
+				return vv;
+		return null;
+	}
+	
 	public String toString() {
 		String s = "";
 		for(Voto v : this.voti) {

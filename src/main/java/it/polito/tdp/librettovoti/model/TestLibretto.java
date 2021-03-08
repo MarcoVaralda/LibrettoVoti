@@ -54,9 +54,21 @@ public class TestLibretto {
 		System.out.println("Cerco l'esame di Analisi 1 nel libretto:");
 		
 		if(daCercare==null)
-			System.out.println("Il voto cercato non è presente nel libretto!");
+			System.out.println("Il voto cercato non è presente nel libretto!\n");
 		else
-			System.out.println(daCercare);
+			System.out.println(daCercare+"\n");
+		
+		// Punto 5
+		
+		System.out.println("***** PUNTO 5 *****\n");
+		
+		Voto daVerificare = libretto.verificaVoto(new Voto("Fisica 1", 28, LocalDate.of(2019, 7, 15)));
+		System.out.println("Cerco conflitti per l'esame di Fisica 1:");
+		
+		if(daVerificare==null)
+			System.out.println("Il voto cercato non presenta conflitti!\n");
+		else
+			System.out.println("E' presente un conflitto: il voto registrato nel libretto è: " +daVerificare+"\n");
 				
 	}	
 
