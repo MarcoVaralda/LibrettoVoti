@@ -103,7 +103,7 @@ public class TestLibretto {
 		}
 		
 		System.out.println("Stampo il libretto: \n"+libretto);
-		System.out.println("Stampo il libretto migliorato: \n"+librettoMigliorato+"\n");
+		System.out.println("Stampo il libretto migliorato: \n"+librettoMigliorato);
 			
 		// Punto 8
 		
